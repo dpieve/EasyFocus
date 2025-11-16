@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:common="clr-namespace:EasyFocus.Common"
     xmlns:converters="clr-namespace:EasyFocus.Converters"
+    xmlns:pomodoroConverters="clr-namespace:EasyFocus.Features.Pomodoro.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mockups="clr-namespace:EasyFocus.Resources.Mockups;assembly=EasyFocus"
@@ -20,6 +21,10 @@
     <UserControl.Resources>
         <converters:FormattedTimeFromSecondsConverter x:Key="FormattedTimeFromSeconds" />
         <converters:SettingsIconFromToggleButtonConverter x:Key="SettingsIconFromToggleButton" />
+
+        <pomodoroConverters:PomodorosCompletedToTitleStringConverter x:Key="PomodorosCompletedToTitleString" />
+        <pomodoroConverters:ShortBreaksCompletedToTitleStringConverter x:Key="ShortBreaksCompletedToTitleString" />
+        <pomodoroConverters:LongBreaksCompletedToTitleStringConverter x:Key="LongBreaksCompletedToTitleString" />
     </UserControl.Resources>
 
     <UserControl.Styles>
@@ -82,17 +87,17 @@
                         x:Name="PomodoroSessionButton"
                         Classes="SessionType"
                         Command="{Binding PomodoroSessionCommand}"
-                        Content="{Binding PomodorosCompleted, StringFormat='{}{0} pomodoros'}" />
+                        Content="{Binding PomodorosCompleted, Converter={StaticResource PomodorosCompletedToTitleString}}" />
                     <Button
                         x:Name="ShortBreakSessionButton"
                         Classes="SessionType"
                         Command="{Binding ShortBreakSessionCommand}"
-                        Content="{Binding ShortBreaksCompleted, StringFormat='{}{0} breaks'}" />
+                        Content="{Binding ShortBreaksCompleted, Converter={StaticResource ShortBreaksCompletedToTitleString}}" />
                     <Button
                         x:Name="LongBreakSessionButton"
                         Classes="SessionType"
                         Command="{Binding LongBreakSessionCommand}"
-                        Content="{Binding LongBreaksCompleted, StringFormat='{}{0} long breaks'}" />
+                        Content="{Binding LongBreaksCompleted, Converter={StaticResource LongBreaksCompletedToTitleString }}" />
                 </StackPanel>
 
             </Viewbox>
