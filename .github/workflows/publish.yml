@@ -32,6 +32,11 @@ jobs:
       - name: Make upload directory
         run: mkdir upload
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
       - name: Publish win-x64
         run: dotnet publish $PRESENTATION_PATH/EasyFocus.Windows -r win-x64 -c Release --sc /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o ./publish/win64
 
