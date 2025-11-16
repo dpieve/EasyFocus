@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia.Browser" />
     <PackageReference Include="Serilog.Sinks.Debug" />
+	<PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" />
   </ItemGroup>
 
   <ItemGroup>
