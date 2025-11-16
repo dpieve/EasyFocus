@@ -86,16 +86,19 @@
                     <Button
                         x:Name="PomodoroSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding PomodorosCompleted, Converter={StaticResource PomodorosCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding PomodoroSessionCommand}"
                         Content="{Binding PomodorosCompleted, Converter={StaticResource PomodorosCompletedToTitleString}}" />
                     <Button
                         x:Name="ShortBreakSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding ShortBreaksCompleted, Converter={StaticResource ShortBreaksCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding ShortBreakSessionCommand}"
                         Content="{Binding ShortBreaksCompleted, Converter={StaticResource ShortBreaksCompletedToTitleString}}" />
                     <Button
                         x:Name="LongBreakSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding LongBreaksCompleted, Converter={StaticResource LongBreaksCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding LongBreakSessionCommand}"
                         Content="{Binding LongBreaksCompleted, Converter={StaticResource LongBreaksCompletedToTitleString }}" />
                 </StackPanel>
