@@ -371,7 +371,9 @@ public sealed partial class PomodoroViewModel : ViewModelBase, IActivatableViewM
 
         int completedSeconds = durationSeconds - SecondsLeft;
 
-        if (completedSeconds < 3)
+        const int minCompletedSecondsAllowed = 3;
+
+        if (completedSeconds < minCompletedSecondsAllowed)
         {
             return;
         }
