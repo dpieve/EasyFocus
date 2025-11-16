@@ -18,7 +18,7 @@ on:
           - 'all'
 
 env:
-  DOTNET_VERSION: '9.x'
+  DOTNET_VERSION: '10.x'
   PRESENTATION_PATH: src/client/presentation
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v5
 
       - name: Make upload directory
         run: mkdir upload
@@ -51,13 +51,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v5
 
       - name: Make upload directory
         run: mkdir upload
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
         
@@ -84,10 +84,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v5
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
@@ -95,7 +95,7 @@ jobs:
         run: dotnet restore $PRESENTATION_PATH/EasyFocus.Android
      
       - name: Publish Android
-        run: dotnet publish $PRESENTATION_PATH/EasyFocus.Android -c Release -f net9.0-android --no-restore -o ./publish -p:RuntimeIdentifier=android-arm64
+        run: dotnet publish $PRESENTATION_PATH/EasyFocus.Android -c Release -f net10.0-android --no-restore -o ./publish -p:RuntimeIdentifier=android-arm64
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.1

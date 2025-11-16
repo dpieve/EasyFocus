@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32811.315
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{2F884AF3-57B8-4B58-BBBB-39F8B27B4731}"
 EndProject
@@ -25,11 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{3DA9
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		..\.gitignore = ..\.gitignore
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
 		..\CODE_OF_CONDUCT.md = ..\CODE_OF_CONDUCT.md
 		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+		..\.github\workflows\deploy.yml = ..\.github\workflows\deploy.yml
 		Directory.Packages.props = Directory.Packages.props
 		..\docs\DOCUMENTATION.md = ..\docs\DOCUMENTATION.md
+		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
 		..\README.md = ..\README.md
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyFocus.Application", "client\EasyFocus.Application\EasyFocus.Application.csproj", "{688C3E09-0337-44C0-816D-1E0672C7EA3C}"
@@ -90,7 +94,7 @@ Global
 		{688C3E09-0337-44C0-816D-1E0672C7EA3C} = {2F884AF3-57B8-4B58-BBBB-39F8B27B4731}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		FileExplorer = ..\
 		SolutionGuid = {83CB65B8-011F-4ED7-BCD3-A6CFA935EF7E}
+		FileExplorer = ..\
 	EndGlobalSection
 EndGlobal
