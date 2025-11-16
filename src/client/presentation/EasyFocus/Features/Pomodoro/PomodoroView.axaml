@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:common="clr-namespace:EasyFocus.Common"
     xmlns:converters="clr-namespace:EasyFocus.Converters"
+    xmlns:pomodoroConverters="clr-namespace:EasyFocus.Features.Pomodoro.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mockups="clr-namespace:EasyFocus.Resources.Mockups;assembly=EasyFocus"
@@ -20,6 +21,10 @@
     <UserControl.Resources>
         <converters:FormattedTimeFromSecondsConverter x:Key="FormattedTimeFromSeconds" />
         <converters:SettingsIconFromToggleButtonConverter x:Key="SettingsIconFromToggleButton" />
+
+        <pomodoroConverters:PomodorosCompletedToTitleStringConverter x:Key="PomodorosCompletedToTitleString" />
+        <pomodoroConverters:ShortBreaksCompletedToTitleStringConverter x:Key="ShortBreaksCompletedToTitleString" />
+        <pomodoroConverters:LongBreaksCompletedToTitleStringConverter x:Key="LongBreaksCompletedToTitleString" />
     </UserControl.Resources>
 
     <UserControl.Styles>
@@ -31,12 +36,24 @@
         </Style>
 
         <Style Selector="ToggleButton.StartButton">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Padding" Value="14,12,14,12" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" /> 
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+
             <Style Selector="^:unchecked">
                 <Setter Property="Content" Value="START" />
             </Style>
+
             <Style Selector="^:checked">
                 <Setter Property="Content" Value="STOP" />
-            </Style>
+			    <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+				    <Setter Property="Background" Value="#FF0000" />
+				</Style>
+		    </Style>
+
         </Style>
 
         <Style Selector="ToggleButton.Settings">
@@ -81,18 +98,21 @@
                     <Button
                         x:Name="PomodoroSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding PomodorosCompleted, Converter={StaticResource PomodorosCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding PomodoroSessionCommand}"
-                        Content="{Binding PomodorosCompleted, StringFormat='{}{0} pomodoros'}" />
+                        Content="{Binding PomodorosCompleted, Converter={StaticResource PomodorosCompletedToTitleString}}" />
                     <Button
                         x:Name="ShortBreakSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding ShortBreaksCompleted, Converter={StaticResource ShortBreaksCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding ShortBreakSessionCommand}"
-                        Content="{Binding ShortBreaksCompleted, StringFormat='{}{0} breaks'}" />
+                        Content="{Binding ShortBreaksCompleted, Converter={StaticResource ShortBreaksCompletedToTitleString}}" />
                     <Button
                         x:Name="LongBreakSessionButton"
                         Classes="SessionType"
+                        ToolTip.Tip="{Binding LongBreaksCompleted, Converter={StaticResource LongBreaksCompletedToTitleString}, StringFormat='Completed {0}'}"
                         Command="{Binding LongBreakSessionCommand}"
-                        Content="{Binding LongBreaksCompleted, StringFormat='{}{0} long breaks'}" />
+                        Content="{Binding LongBreaksCompleted, Converter={StaticResource LongBreaksCompletedToTitleString }}" />
                 </StackPanel>
 
             </Viewbox>
@@ -151,13 +171,7 @@
                     VerticalAlignment="Stretch"
                     Orientation="Horizontal">
                     <ToggleButton
-                        Width="150"
-                        Padding="14,12,14,12"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
                         Classes="StartButton"
-                        FontSize="20"
-                        FontWeight="DemiBold"
                         IsChecked="{Binding IsTimerTicking, Mode=TwoWay}" />
                     <Button
                         Margin="5,0,0,0"
@@ -185,7 +199,8 @@
                 Opacity="0.3"
                 ProgressTextFormat="{}{0}/{3}"
                 ShowProgressText="True"
-                ToolTip.Tip="Before long break" />
+                Height="30"
+                ToolTip.Tip="Completed sessions before a long break" />
         </Grid>
 
         <!--  SETTINGS  -->
@@ -209,7 +224,7 @@
 
         <ToggleButton
             x:Name="SettingsButton"
-            Margin="0,50,30,0"
+            Margin="0,30,30,0"
             Padding="10"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"

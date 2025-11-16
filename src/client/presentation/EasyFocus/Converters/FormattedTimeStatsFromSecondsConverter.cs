@@ -12,9 +12,15 @@ public sealed class FormattedTimeStatsFromSecondsConverter : IValueConverter
         {
             return string.Empty;
         }
+
+        if (secondsLeft < 0)
+        {
+            return "0m 0s";
+        }
+
         var days = secondsLeft / 86400;
-        var hours = secondsLeft / 3600;
-        var minutes = secondsLeft / 60;
+        var hours = (secondsLeft % 86400) / 3600;
+        var minutes = (secondsLeft % 3600) / 60;
         var seconds = secondsLeft % 60;
 
         if (days > 0)
