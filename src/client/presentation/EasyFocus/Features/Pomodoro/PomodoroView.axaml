@@ -46,10 +46,14 @@
             <Style Selector="^:unchecked">
                 <Setter Property="Content" Value="START" />
             </Style>
+
             <Style Selector="^:checked">
                 <Setter Property="Content" Value="STOP" />
-                <Setter Property="Background" Value="#FF0000" />
-            </Style>
+			    <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+				    <Setter Property="Background" Value="#FF0000" />
+				</Style>
+		    </Style>
+
         </Style>
 
         <Style Selector="ToggleButton.Settings">
