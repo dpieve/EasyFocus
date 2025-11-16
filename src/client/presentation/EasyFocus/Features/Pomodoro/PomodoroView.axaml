@@ -218,7 +218,7 @@
 
         <ToggleButton
             x:Name="SettingsButton"
-            Margin="0,50,30,0"
+            Margin="0,30,30,0"
             Padding="10"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
