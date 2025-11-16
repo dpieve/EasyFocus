@@ -76,6 +76,9 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      - name: Install Android workload
+        run: dotnet workload install android
+
       - name: Restore dependencies
         run: dotnet restore src/client/presentation/EasyFocus.Android
      
