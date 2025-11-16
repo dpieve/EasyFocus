@@ -190,7 +190,8 @@
                 Opacity="0.3"
                 ProgressTextFormat="{}{0}/{3}"
                 ShowProgressText="True"
-                ToolTip.Tip="Before long break" />
+                Height="30"
+                ToolTip.Tip="Completed sessions before a long break" />
         </Grid>
 
         <!--  SETTINGS  -->
