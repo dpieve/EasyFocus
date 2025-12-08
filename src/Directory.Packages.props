@@ -6,7 +6,7 @@
   <ItemGroup>
     <!-- Avalonia packages -->
     <!-- Important: keep version in sync! -->
-    <PackageVersion Include="Avalonia" Version="11.3.8" />
+    <PackageVersion Include="Avalonia" Version="11.3.9" />
     <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.3.8" />
     <PackageVersion Include="Avalonia.LinuxFramebuffer" Version="11.3.8" />
     <PackageVersion Include="Avalonia.Markup.Xaml.Loader" Version="11.3.8" />
