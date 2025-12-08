@@ -42,10 +42,10 @@
     <PackageVersion Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageVersion Include="Splat.Microsoft.Extensions.DependencyInjection" Version="15.3.1" />
     <PackageVersion Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.1" />
-	<PackageVersion Include="SkiaSharp" Version="3.119.0" />
-	<PackageVersion Include="SkiaSharp.HarfBuzz" Version="3.119.0" />
-	<PackageVersion Include="SkiaSharp.NativeAssets.Linux" Version="3.119.0" />
-	<PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="3.119.0" />
-	<PackageVersion Include="SkiaSharp.NativeAssets.iOS" Version="3.119.0" />
+	<PackageVersion Include="SkiaSharp" Version="3.119.1" />
+	<PackageVersion Include="SkiaSharp.HarfBuzz" Version="3.119.1" />
+	<PackageVersion Include="SkiaSharp.NativeAssets.Linux" Version="3.119.1" />
+	<PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="3.119.1" />
+	<PackageVersion Include="SkiaSharp.NativeAssets.iOS" Version="3.119.1" />
   </ItemGroup>
 </Project>
