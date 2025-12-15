@@ -33,7 +33,7 @@
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="NetCoreAudio" Version="2.0.0" />
-    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="2.1.27" />
+    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="2.5.1" />
     <PackageVersion Include="Serilog" Version="4.2.0" />
     <PackageVersion Include="Serilog.Extensions" Version="8.0.3" />
     <PackageVersion Include="Serilog.Extensions.Logging" Version="9.0.1" />
