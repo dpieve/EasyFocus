@@ -1,6 +1,6 @@
 using Avalonia;
 using Avalonia.iOS;
-using Avalonia.ReactiveUI;
+using ReactiveUI.Avalonia;
 using Foundation;
 
 namespace EasyFocus.iOS;
