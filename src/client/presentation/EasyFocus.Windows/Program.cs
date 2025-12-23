@@ -1,8 +1,8 @@
 ﻿using Avalonia;
-using Avalonia.ReactiveUI;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ReactiveUI;
+using ReactiveUI.Avalonia;
 using Serilog;
 using Splat;
 using Splat.Microsoft.Extensions.DependencyInjection;

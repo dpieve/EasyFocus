@@ -1,8 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
-using Avalonia.ReactiveUI;
 using Avalonia.VisualTree;
+using ReactiveUI.Avalonia;
 
 namespace EasyFocus.Features;
 

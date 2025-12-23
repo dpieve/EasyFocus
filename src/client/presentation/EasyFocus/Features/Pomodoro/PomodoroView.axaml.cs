@@ -1,12 +1,12 @@
 using Avalonia.Controls;
 using Avalonia.Media;
-using Avalonia.ReactiveUI;
 using Avalonia.VisualTree;
 using EasyFocus.Domain.Entities;
 using ReactiveUI;
+using ReactiveUI.Avalonia;
 using Serilog;
 using System;
-using System.Reactive.Disposables;
+using System.Reactive.Disposables.Fluent;
 
 namespace EasyFocus.Features.Pomodoro;
 

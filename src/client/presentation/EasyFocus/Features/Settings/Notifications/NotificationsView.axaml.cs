@@ -1,9 +1,9 @@
-using Avalonia.ReactiveUI;
 using EasyFocus.Domain.Entities;
 using ReactiveUI;
+using ReactiveUI.Avalonia;
 using Serilog;
 using System;
-using System.Reactive.Disposables;
+using System.Reactive.Disposables.Fluent;
 
 namespace EasyFocus.Features.Settings.Notifications;
 
