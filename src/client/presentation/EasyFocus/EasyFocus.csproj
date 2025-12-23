@@ -29,10 +29,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>none</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Avalonia.ReactiveUI" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Microsoft.Extensions.Hosting" />
     <PackageReference Include="NetCoreAudio" />
+    <PackageReference Include="ReactiveUI.Avalonia" />
     <PackageReference Include="ReactiveUI.SourceGenerators">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,7 +40,7 @@
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.Extensions.Logging" />	
 	<PackageReference Include="SkiaSharp" />
-	<PackageReference Include="SkiaSharp.HarfBuzz"  />
+	<PackageReference Include="SkiaSharp.HarfBuzz" />
 
   </ItemGroup>
 
