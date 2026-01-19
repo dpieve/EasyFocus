@@ -33,7 +33,7 @@
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="NetCoreAudio" Version="2.0.0" />
     <PackageVersion Include="ReactiveUI.Avalonia" Version="11.3.8" />
-    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="2.5.1" />
+    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="2.6.1" />
     <PackageVersion Include="Serilog" Version="4.3.0" />
     <PackageVersion Include="Serilog.Extensions" Version="8.0.3" />
     <PackageVersion Include="Serilog.Extensions.Logging" Version="10.0.0" />
