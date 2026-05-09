@@ -16,7 +16,7 @@
     x:DataType="views:MainWindow"
     Background="Transparent"
     DoubleTapped="Window_DoubleTapped"
-    ExtendClientAreaChromeHints="NoChrome"
+    WindowDecorations="None"
     ExtendClientAreaTitleBarHeightHint="-1"
     ExtendClientAreaToDecorationsHint="True"
     Icon="/Assets/panda.ico"

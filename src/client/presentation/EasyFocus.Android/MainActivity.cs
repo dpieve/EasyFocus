@@ -8,6 +8,8 @@ using ReactiveUI;
 using Serilog;
 using Splat;
 using Splat.Microsoft.Extensions.DependencyInjection;
+using System;
+using global::Android.Runtime;
 
 namespace EasyFocus.Android;
 
@@ -17,8 +19,18 @@ namespace EasyFocus.Android;
     Icon = "@drawable/icon",
     MainLauncher = true,
     ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.UiMode)]
-public class MainActivity : AvaloniaMainActivity<App>
+public class MainActivity : AvaloniaMainActivity
 {
+}
+
+[Application]
+public class AndroidApp : AvaloniaAndroidApplication<App>
+{
+    public AndroidApp(IntPtr javaReference, JniHandleOwnership transfer)
+        : base(javaReference, transfer)
+    {
+    }
+
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
     {
         _ = Host.CreateDefaultBuilder()
