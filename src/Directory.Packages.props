@@ -12,7 +12,7 @@
     <PackageVersion Include="Avalonia.Markup.Xaml.Loader" Version="12.0.4" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="12.0.4" />
     <PackageVersion Include="Avalonia.Fonts.Inter" Version="12.0.4" />
-    <PackageVersion Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.1" />
+    <PackageVersion Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.2" />
     <PackageVersion Include="Avalonia.Desktop" Version="12.0.4" />
     <PackageVersion Include="Avalonia.iOS" Version="12.0.4" />
     <PackageVersion Include="Avalonia.Browser" Version="12.0.4" />
@@ -33,7 +33,7 @@
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="NetCoreAudio" Version="2.0.0" />
     <PackageVersion Include="ReactiveUI.Avalonia" Version="11.3.8" />
-    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="2.6.30" />
+    <PackageVersion Include="ReactiveUI.SourceGenerators" Version="3.1.0" />
     <PackageVersion Include="Serilog" Version="4.3.0" />
     <PackageVersion Include="Serilog.Extensions" Version="8.0.3" />
     <PackageVersion Include="Serilog.Extensions.Logging" Version="10.0.0" />
